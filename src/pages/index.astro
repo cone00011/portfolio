@@ -6,10 +6,156 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  
+  <section>
+    <!-- Vertikale linjer (med lavere z-index, så de er bagved alt andet) -->
+    <div class="absolute top-0 left-[126px] w-[2px] h-[4770px] bg-black z-0"></div>
+    <div class="absolute top-0 left-[257px] w-[2px] h-[4770px] bg-black z-0"></div>
+  </section>
+  
+  <section>
+    <img src="/img/Star.png" alt="stjerne" class="ml-90 mt-10">
+    <img src="/img/Connorselkirk.png" alt="herosection" class="block mx-auto mt-30">
+  </section>
+  
+  <section>
+    <div class="ml-20 mt-40 z-10">
+      <a 
+        href="https://www.linkedin.com/in/connor-neillands-0a5195120/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center w-[162px] h-[52px] bg-black text-white rounded-xl relative text-[25px] border-2 border-transparent hover:bg-white hover:text-black hover:border-black transition-colors "
+      >
+        <span class="underline decoration-white hover:decoration-black decoration-[1px] underline-offset-[6px]">LinkedIn</span>
+      </a>
+    </div>
+    
+    <div class="ml-200">
+      <p class="text-[25px]">Con1116@hotmail.com</p>
+    </div>
+  </section>
+  
+  <section class="text-[37px] flex items-center justify-center mt-35">
+    <h2 class="relative parallax" data-speed="0.1">[about me]</h2>
+  </section>
+  
+  <section class="relative parallax" data-speed="0.1">
+    <img src="/img/Star.png" alt="stjerne" class="ml-1 mt-10">
+  </section>
+
+  <section class="grid grid-cols-2 gap-6 ml-[270px] relative z-10 text-[18px]">
+    <p>
+      Jeg er en brugercentreret og æstetisk bevidst designer, der skaber intuitive og visuelt stærke løsninger. Med et skarpt øje for detaljer og et solidt greb om moderne designreferencer arbejder jeg målrettet på at løse alle opgaver stillet foran mig. <br>
+      <br>
+      Jeg elsker at eksperimentere med design, lege med nye idéer og udvikle koncepter, der kombinerer kreativitet med funktionalitet. For mig er design en proces, der bliver endnu stærkere, når den deles med andre. Derfor trives jeg i kreative teams, hvor idéer flyver frem og tilbage, og hvor vi sammen kan løfte et projekt til noget unikt. Jeg elsker at sparre, udfordre og blive udfordret – og jeg er ikke bange for at tage chancer eller prøve nye ting. Hvis jeg støder på noget, jeg ikke kan, lærer jeg det undervejs.
+    </p>
+    
+    <div class="relative">
+      <img src="/img/mig_selv.png" alt="mig" class="w-[600px] h-[500px] object-cover z-10" />
+      <!-- Vertikale linjer -->
+      <div class="absolute left-0 w-[2px] h-[3205px] bg-black z-0" style="left: calc(100% - 3px);"></div>
+      <div class="absolute left-0 w-[2px] h-[3205px] bg-black z-0" style="left: calc(100% - 133px);"></div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-2 gap-6 ml-[170px] z-10">
+    <img src="/img/migselv2.png" alt="mig igen">
+
+    <p class="text-[18px] mt-30 mr-40 ml-[-100px]">
+      Jeg søger en praktikplads, hvor jeg kan få lov til at forfine mine evner, lære af dygtige mennesker og bidrage med min energi, nysgerrighed og kreative tilgang. Hvis I leder efter en engageret og idérig praktikant, der elsker at samarbejde og udvikle stærke visuelle løsninger, så lad os tage en snak!
+    </p>
+  </section>
+
+  <!-- Vertikale linjer (placeret bagved med lav z-index) -->
+
+
+  <section class="relative parallax" data-speed="0.1">
+    <img src="/img/Star.png" alt="stjerne" class="ml-200 mt-[-40px]">
+  </section>
+
+  <!-- PROJEKTER -->
+  <section class="text-[37px] flex items-center justify-center">
+    <h2 class="relative parallax" data-speed="0.1">[projects]</h2>
+  </section>
+
+  <section class="grid grid-cols-2 gap-6 ml-[170px] z-10 mt-90">
+	<div class="z-20 mt-10">
+		<a href="https://t10grums.netlify.app/" class="text-blue-600 underline text-[35px]">Grums</a>
+
+	  <p class="text-[18px]">Hjemmeside designet til Kaffe- & vinbaren Grums.</p>
+	</div>
+	<div class="z-20">
+	  <img src="/img/grums.png" alt="grums" class="w-[900px] h-auto" />
+	</div>
+  </section>
+  <section class="relative parallax" data-speed="0.1">
+    <img src="/img/Star.png" alt="stjerne" class="ml-1 mt-0">
+  </section>
+
+  <section class="grid grid-cols-2 gap-6 ml-[170px] z-10 mt-0">
+	<div class="z-20">
+		<img src="/img/cross.png" alt="grums" class="w-[900px] h-auto" />
+	  </div>
+	
+	<div class="z-20 mt-10">
+		<a href="https://crossstitchfont.netlify.app/" class="text-blue-600 underline text-[35px]">Cross Stitch</a>
+
+	  <p class="text-[18px]">Typografi & koncept
+		designet af mig</p>
+	</div>
+	
+  </section>
+
+  <section class="grid grid-cols-2 gap-6 ml-[170px] z-10 mt-30">
+	<div class="z-20 mt-10">
+		<a href="https://digitalskraldedag6.netlify.app/" class="text-blue-600 underline text-[35px]">Digital Skralde Dag</a>
+
+	  <p class="text-[18px]">Hjemmeside designet
+		til den danske version 
+		af Digital Clean up day</p>
+	</div>
+	<div class="z-20">
+	  <img src="/img/skralde_dag.png" alt="grums" class="w-[900px] h-auto" />
+	</div>
+  </section>
+
+
+  <section class="grid grid-cols-2 gap-6 ml-[170px] z-10 mt-30">
+	<div class="z-20">
+		<img src="/img/plakaten.png" alt="grums" class="w-[900px] h-auto" />
+	  </div>
+	
+	<div class="z-20 mt-10">
+		<a href="https://plakatojeblik.netlify.app/" class="text-blue-600 underline text-[35px]">Øjeblik</a>
+
+	  <p class="text-[18px]">Plakat designet til Mock-
+		up kunst festival <br>
+		Øjeblik</p>
+	</div>
+	
+  </section>
+
+
+  <section class="mt-15">
+
+<img src="/img/footer2.png" alt="footer">
+
+  </section>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+        window.addEventListener("scroll", function () {
+          let scrolled = window.scrollY;
+          document.querySelectorAll(".parallax").forEach((element) => {
+            let speed = parseFloat(element.getAttribute("data-speed")) || 0.2;
+            element.style.transform = `translateY(${scrolled * speed}px)`;
+          });
+        });
+      }
+    });
+  </script>
+
 </MainLayout>
